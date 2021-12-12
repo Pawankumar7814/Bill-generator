@@ -2,7 +2,11 @@
 var express = require('express');
 var http = require('http');
 var ejs = require('ejs');
-var templateToPdf = require('html-template-pdf');
+var PDFDoc = require('pdfkit');
+const fs = require('fs');
+
+//Creating new document
+const doc = new PDFDoc();
 
 //Creating Application
 var app = express();
@@ -16,9 +20,19 @@ app.set('view engine', 'ejs');
 var port = 2100 | process.env.port;
 
 //Routes
-app.use('/', require('./routes/mainpagesroute.js'))
+app.use('/', require('./routes/mainpagesroute.js'));
+
+//Saving the pdf file in root directory
+doc.pipe(fs.createWriteStream('Bill.pdf'));
+
+//Setting up font size, font family
+doc.fontSize(25)
+    .text(path.join(__dirname, '../views/mainpages/index.ejs'));
+
+//Finanlize the PDF and end the stream
+doc.end();
 
 //Starting server
 http.createServer(app).listen(port, () => {
     console.log("Port = " + port);
-})
+});
