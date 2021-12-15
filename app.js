@@ -27,7 +27,7 @@ doc.pipe(fs.createWriteStream('Bill.pdf'));
 
 //Setting up font size, font family
 doc.fontSize(25)
-    .text(path.join(__dirname, '../views/mainpages/index.ejs'));
+    .text("Hello");
 
 //Finanlize the PDF and end the stream
 doc.end();
