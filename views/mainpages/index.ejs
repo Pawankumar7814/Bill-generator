@@ -5,23 +5,23 @@
             <form class="row g-3" action="/print" method="post">
                 <div class="col-md-6 col-sm">
                     <label for="" class="form-label ulab">First Name</label>
-                    <input type="text" name="fname" class="form-control" placeholder="First name" value="<%= v1 %>" required>
+                    <input type="text" name="fname" class="form-control" placeholder="First name" value="<%= data.F_name %>" required>
                 </div>
                 <div class="col-md-6">
                     <label for="" class="form-label">Last Name</label>
-                    <input type="text" name="lname" class="form-control" placeholder="Last Name" value="<%= v2 %>" required>
+                    <input type="text" name="lname" class="form-control" placeholder="Last Name" value="<%= data.l_name %>" required>
                 </div>
                 <div class="col-12">
                     <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" name="address" class="form-control" id="inputAddress" placeholder="A-63 Paschim Vihar" value="<%= v3 %>" required>
+                    <input type="text" name="address" class="form-control" id="inputAddress" placeholder="A-63 Paschim Vihar" value="<%= data.add %>" required>
                 </div>
                 <div class="col-md-6">
                     <label for="inputCity" class="form-label">City</label>
-                    <input type="text" name="city" class="form-control" id="inputCity" placeholder="New Delhi" value="<%= v4 %>" required>
+                    <input type="text" name="city" class="form-control" id="inputCity" placeholder="New Delhi" value="<%= data.City %>" required>
                 </div>
                 <div class="col-md-4">
                     <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" name="state" class="form-select" value="<%= v5 %>" required>
+                    <select id="inputState" name="state" class="form-select" value="<%= data.state %>" required>
                         <option selected>Select</option>
                         <option>Delhi</option>
                         <option>Maharashtra</option>
@@ -30,18 +30,18 @@
                 </div>
                 <div class="col-md-2">
                     <label for="inputZip" class="form-label">Postal Code</label>
-                    <input type="text" name="postalcode" class="form-control" placeholder="110063" value="<%= v6 %>" required>
+                    <input type="text" name="postalcode" class="form-control" placeholder="110063" value="<%= data.post %>" required>
                 </div>
                 <div class="col-md-3">
                     <label for="inputZip" class="form-label">Amount</label>
-                    <input type="text" name="amt" class="form-control" placeholder="Rs 0.00" value="<%= v7 %>" required>
+                    <input type="text" name="amt" class="form-control" placeholder="Rs 0.00" value="<%= data.amount %>" required>
                 </div>
                 <div class="col-md-3">
                     <label for="inputZip" class="form-label">Quantity</label>
-                    <input type="text" name="qty" class="form-control" placeholder="Quantity" value="<%= v8 %>" required>
+                    <input type="text" name="qty" class="form-control" placeholder="Quantity" value="<%= data.qty %>" required>
                 </div>
                 <div class="col-12 dbtn">
-                    <input type="submit" value="Print" class="btn btn-primary">
+                    <input type="submit" value="Submit" class="btn btn-primary">
 
                     <input type="reset" value="Clear" class="btn btn-primary">
                 </div>

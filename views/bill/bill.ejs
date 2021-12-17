@@ -1,0 +1,38 @@
+<%- include("../partial/header.ejs") %>
+    <section>
+        <div class="container-fluid udiv">
+            <h1>Pawan Jewellers</h1>
+            <form class="row g-3" action="/print" method="post">
+                <div class="col-md-6 col-sm">
+                    <label for="" class="form-label ulab">First Name : <%= data.F_name %></label>
+                </div>
+                <div class="col-md-6">
+                    <label for="" class="form-label">Last Name : <%= data.l_name %></label>
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address : <%= data.add %> </label>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">City : <%= data.City %></label>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">State : <%= data.state %></label>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Postal Code : <%= data.post %></label>
+                </div>
+                <div class="col-md-3">
+                    <label for="inputZip" class="form-label">Amount : <%= data.amount %></label>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="inputZip" class="form-label">Quantity : <%= data.qty %></label>
+                </div>
+                <div class="col-12 dbtn">
+                    <input type="submit" value="Print" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <%- include("../partial/footer.ejs") %>
